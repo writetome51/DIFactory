@@ -1,0 +1,29 @@
+{
+  "name": "ObjectFactory",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/writetome51/my_js_library.git"
+  },
+  "keywords": [
+    "dependency-injection",
+    "dependency",
+    "injection",
+    "factory"
+  ],
+  "author": "Steve Thompson",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/writetome51/ObjectFactory/issues"
+  },
+  "homepage": "https://github.com/writetome51/ObjectFactory#readme",
+  "dependencies": {
+    "basic-data-handling": "latest",
+    "datatype-handlers": "latest"
+  }
+}
