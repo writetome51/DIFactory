@@ -1,5 +1,5 @@
 import { IDependencyRegistration, IStoredDependencyRegistration }
-	from './IDependencyRegistration';
+	from '../IDependencyRegistration';
 import { notArray } from 'basic-data-handling/isArray_notArray';
 
 

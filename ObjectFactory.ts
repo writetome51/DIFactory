@@ -1,5 +1,5 @@
 import { _dInjector } from './privy/DependencyInjector';
-import { IDependencyRegistration } from './privy/IDependencyRegistration';
+import { IDependencyRegistration } from './IDependencyRegistration';
 
 
 /*****
