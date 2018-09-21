@@ -105,4 +105,4 @@ export class DependencyInjector {
 
 
 // Only intended to be imported into ObjectFactory:
-export const dInjector = new DependencyInjector();
+export const _dInjector = new DependencyInjector();

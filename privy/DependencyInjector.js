@@ -84,4 +84,4 @@ var DependencyInjector = /** @class */ (function () {
 }());
 exports.DependencyInjector = DependencyInjector;
 // Only intended to be imported into ObjectFactory:
-exports.dInjector = new DependencyInjector();
+exports._dInjector = new DependencyInjector();

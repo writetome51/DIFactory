@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var DependencyInjector_1 = require("./DependencyInjector");
+var DependencyInjector_1 = require("./privy/DependencyInjector");
 /*****
  ObjectFactory simplifies the instantiating of a class that uses dependency injection:
 
@@ -20,14 +20,14 @@ var ObjectFactory = /** @class */ (function () {
     function ObjectFactory() {
     }
     ObjectFactory.register = function (registration) {
-        DependencyInjector_1.dInjector.register(registration);
+        DependencyInjector_1._dInjector.register(registration);
     };
     ObjectFactory.registerMultiple = function (registrations) {
-        DependencyInjector_1.dInjector.registerMultiple(registrations);
+        DependencyInjector_1._dInjector.registerMultiple(registrations);
     };
     ObjectFactory.getInstance = function (TheClass, constructor_arguments_that_come_after_the_dependencies) {
         if (constructor_arguments_that_come_after_the_dependencies === void 0) { constructor_arguments_that_come_after_the_dependencies = []; }
-        var factory = DependencyInjector_1.dInjector.getFactory(TheClass);
+        var factory = DependencyInjector_1._dInjector.getFactory(TheClass);
         return factory.apply(void 0, constructor_arguments_that_come_after_the_dependencies);
     };
     return ObjectFactory;

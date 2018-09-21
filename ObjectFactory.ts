@@ -1,5 +1,5 @@
-import { dInjector } from './DependencyInjector';
-import { IDependencyRegistration } from './IDependencyRegistration';
+import { _dInjector } from './privy/DependencyInjector';
+import { IDependencyRegistration } from './privy/IDependencyRegistration';
 
 
 /*****
@@ -23,17 +23,17 @@ export class ObjectFactory {
 
 
 	static register(registration: IDependencyRegistration) {
-		dInjector.register(registration);
+		_dInjector.register(registration);
 	}
 
 
 	static registerMultiple(registrations: IDependencyRegistration[]) {
-		dInjector.registerMultiple(registrations);
+		_dInjector.registerMultiple(registrations);
 	}
 
 
 	static getInstance(TheClass: Object, constructor_arguments_that_come_after_the_dependencies = []) {
-		let factory = dInjector.getFactory(TheClass);
+		let factory = _dInjector.getFactory(TheClass);
 		return factory(...constructor_arguments_that_come_after_the_dependencies);
 	}
 
