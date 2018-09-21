@@ -1,6 +1,6 @@
 {
   "name": "@writetome51/object-factory",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "A simple dependency-injection tool",
   "main": "",
   "scripts": {
@@ -17,7 +17,7 @@
     "factory"
   ],
   "author": "Steve Thompson",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/writetome51/ObjectFactory/issues"
   },
