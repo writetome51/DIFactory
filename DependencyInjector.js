@@ -1,29 +1,11 @@
 "use strict";
-var __extends = (this && this.__extends) || (function () {
-    var extendStatics = function (d, b) {
-        extendStatics = Object.setPrototypeOf ||
-            ({ __proto__: [] } instanceof Array && function (d, b) { d.__proto__ = b; }) ||
-            function (d, b) { for (var p in b) if (b.hasOwnProperty(p)) d[p] = b[p]; };
-        return extendStatics(d, b);
-    }
-    return function (d, b) {
-        extendStatics(d, b);
-        function __() { this.constructor = d; }
-        d.prototype = b === null ? Object.create(b) : (__.prototype = b.prototype, new __());
-    };
-})();
 Object.defineProperty(exports, "__esModule", { value: true });
-var BaseObject_1 = require("../BaseObject");
 var isArray_notArray_1 = require("basic-data-handling/isArray_notArray");
-var prepend_append_1 = require("datatype-handlers/arrays/modify/return_void/prepend_append");
 // DependencyInjector, intended to be used as a singleton only by ObjectFactory.
 // Using ObjectFactory instead of directly accessing this class simplifies its usage.
-var DependencyInjector = /** @class */ (function (_super) {
-    __extends(DependencyInjector, _super);
+var DependencyInjector = /** @class */ (function () {
     function DependencyInjector() {
-        var _this = _super !== null && _super.apply(this, arguments) || this;
-        _this._registrations = [];
-        return _this;
+        this._registrations = [];
     }
     DependencyInjector.prototype.registerMultiple = function (registrations) {
         for (var i = 0; i < registrations.length; ++i) {
@@ -87,7 +69,7 @@ var DependencyInjector = /** @class */ (function (_super) {
         registration.dependencies.forEach(function (dependency) {
             // recursive call of getInstance():
             var dependencyInstance = _this._getInstance(dependency);
-            prepend_append_1.appendOne(dependencyInstance, dependencyInstances);
+            dependencyInstances.push(dependencyInstance);
         });
         return dependencyInstances;
     };
@@ -99,7 +81,7 @@ var DependencyInjector = /** @class */ (function (_super) {
         return registration;
     };
     return DependencyInjector;
-}(BaseObject_1.BaseObject));
+}());
 exports.DependencyInjector = DependencyInjector;
 // Only intended to be imported into ObjectFactory:
 exports.dInjector = new DependencyInjector();

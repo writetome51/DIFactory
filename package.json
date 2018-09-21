@@ -1,6 +1,6 @@
 {
-  "name": "ObjectFactory",
-  "version": "1.0.0",
+  "name": "object-factory",
+  "version": "1.0.1",
   "description": "",
   "main": "",
   "scripts": {
@@ -23,7 +23,6 @@
   },
   "homepage": "https://github.com/writetome51/ObjectFactory#readme",
   "dependencies": {
-    "basic-data-handling": "latest",
-    "datatype-handlers": "latest"
+    "basic-data-handling": "latest"
   }
 }

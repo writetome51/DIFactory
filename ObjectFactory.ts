@@ -1,4 +1,3 @@
-import { BaseObject } from '../BaseObject';
 import { dInjector } from './DependencyInjector';
 import { IDependencyRegistration } from './IDependencyRegistration';
 
@@ -20,7 +19,7 @@ import { IDependencyRegistration } from './IDependencyRegistration';
  *****/
 
 
-export class ObjectFactory extends BaseObject {
+export class ObjectFactory {
 
 
 	static register(registration: IDependencyRegistration) {

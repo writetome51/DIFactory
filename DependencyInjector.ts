@@ -1,16 +1,12 @@
-import { BaseObject } from '../BaseObject';
-import {
-	IDependencyRegistration, IStoredDependencyRegistration
-} from './IDependencyRegistration';
+import { IDependencyRegistration, IStoredDependencyRegistration }
+	from './IDependencyRegistration';
 import { notArray } from 'basic-data-handling/isArray_notArray';
-import { appendOne } from 'datatype-handlers/arrays/modify/return_void/prepend_append';
 
 
 // DependencyInjector, intended to be used as a singleton only by ObjectFactory.
 // Using ObjectFactory instead of directly accessing this class simplifies its usage.
 
-
-export class DependencyInjector extends BaseObject {
+export class DependencyInjector {
 
 	private _registrations: IStoredDependencyRegistration[] = [];
 
@@ -90,7 +86,7 @@ export class DependencyInjector extends BaseObject {
 		registration.dependencies.forEach((dependency) => {
 			// recursive call of getInstance():
 			let dependencyInstance = this._getInstance(dependency);
-			appendOne(dependencyInstance, dependencyInstances);
+			dependencyInstances.push(dependencyInstance);
 		});
 		return dependencyInstances;
 	}
