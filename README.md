@@ -1,13 +1,31 @@
-Function-naming conventions:
+To use Object Factory:
 
-All functions that return something that is not boolean begin with the word 'get'.
+To make ObjectFactory handle dependency-injection for a class, you should
+register the class right below its own definition. Example:
 
-All functions that return boolean have names that imply they return boolean, such as 'isEmpty'
-or 'notEmpty', or 'isArray'.
+export TheClass{
 
-All functions that return void have names that imply they perform an action and don't return anything, like 'alphabetize()' .
+   constructor(dpendency1, dpendency2, dpendency3){ ... }
 
-All public functions begin with lowercase letter, are camel-cased, and contain no underscores,
-except for a few exceptions where the function's name is long.
+   ...code...
 
-If a function name begins with an underscore, it's a private function not intended for use outside of its library.
+} // Below the closing brace, register the class with ObjectFactory:
+
+ ObjectFactory.register(
+     {
+        class: TheClass,
+
+        // Make sure the dependencies are listed in same order as they are in the constructor's parameters.
+        dependencies: [
+           DependencyClass1, DependencyClass2, DependencyClass3
+        ]
+     }
+ );
+
+ Then, wherever you want a new instance of TheClass, write:
+
+ let instance = ObjectFactory.getInstance(TheClass, []);
+
+ In the statement above, the empty array is there to hold any arguments that get passed
+ to the constructor after the injected dependencies.  If there are no arguments after
+ the dependencies, it's unnecessary to pass the array.
