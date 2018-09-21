@@ -1,14 +1,14 @@
 {
   "name": "object-factory",
-  "version": "1.0.1",
-  "description": "",
+  "version": "1.0.0",
+  "description": "A simple dependency-injection tool",
   "main": "",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/writetome51/my_js_library.git"
+    "url": "git+https://github.com/writetome51/ObjectFactory.git"
   },
   "keywords": [
     "dependency-injection",
