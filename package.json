@@ -2,9 +2,10 @@
   "name": "@writetome51/di-factory",
   "version": "1.0.0",
   "description": "A simple dependency-injection tool",
-  "main": "",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
@@ -22,6 +23,9 @@
     "url": "https://github.com/writetome51/DIFactory/issues"
   },
   "homepage": "https://github.com/writetome51/DIFactory#readme",
+  "devDependencies": {
+    "typescript": "^3.0.1"
+  },
   "dependencies": {
     "basic-data-handling": "latest"
   }

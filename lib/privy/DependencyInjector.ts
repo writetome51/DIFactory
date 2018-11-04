@@ -3,8 +3,8 @@ import { IDependencyRegistration, IStoredDependencyRegistration }
 import { notArray } from 'basic-data-handling/isArray_notArray';
 
 
-// DependencyInjector, intended to be used as a singleton only by ObjectFactory.
-// Using ObjectFactory instead of directly accessing this class simplifies its usage.
+// DependencyInjector, intended to be used as a singleton only by DIFactory.
+// Using DIFactory instead of directly accessing this class simplifies its usage.
 
 export class DependencyInjector {
 
@@ -104,5 +104,5 @@ export class DependencyInjector {
 }
 
 
-// Only intended to be imported into ObjectFactory:
+// Only intended to be imported into DIFactory:
 export const _dInjector = new DependencyInjector();
