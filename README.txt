@@ -8,8 +8,8 @@ DIFactory simplifies the instantiating of a class that uses dependency injection
 
 To use DIFactory:
 
-To make DIFactory handle dependency-injection for a class, you should
-register the class right below its own definition. Example:
+To make DIFactory handle dependency-injection for a class, you need to register that class
+with DIFactory.  In this example, a class is registered right below its own definition:
 
 export class TheClass{
 
