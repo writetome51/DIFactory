@@ -2,34 +2,34 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var DependencyInjector_1 = require("./privy/DependencyInjector");
 /*****
- ObjectFactory simplifies the instantiating of a class that uses dependency injection:
+ DIFactory simplifies the instantiating of a class that uses dependency injection:
 
- let object = ObjectFactory.getInstance(
+ let object = DIFactory.getInstance(
      TheClass, [nonDependencyArg, nonDependencyArg2,...]
  );
 
- To accomplish this, TheClass must first be registered with ObjectFactory:
+ To accomplish this, TheClass must first be registered with DIFactory:
 
- ObjectFactory.register(
+ DIFactory.register(
      {class: TheClass, dependencies: [DependencyClass1, DependencyClass2,...] }
  );
 
  If a class doesn't have any injected dependencies, it's unnecessary to register it.
  *****/
-var ObjectFactory = /** @class */ (function () {
-    function ObjectFactory() {
+var DIFactory = /** @class */ (function () {
+    function DIFactory() {
     }
-    ObjectFactory.register = function (registration) {
+    DIFactory.register = function (registration) {
         DependencyInjector_1._dInjector.register(registration);
     };
-    ObjectFactory.registerMultiple = function (registrations) {
+    DIFactory.registerMultiple = function (registrations) {
         DependencyInjector_1._dInjector.registerMultiple(registrations);
     };
-    ObjectFactory.getInstance = function (TheClass, constructor_arguments_that_come_after_the_dependencies) {
+    DIFactory.getInstance = function (TheClass, constructor_arguments_that_come_after_the_dependencies) {
         if (constructor_arguments_that_come_after_the_dependencies === void 0) { constructor_arguments_that_come_after_the_dependencies = []; }
         var factory = DependencyInjector_1._dInjector.getFactory(TheClass);
         return factory.apply(void 0, constructor_arguments_that_come_after_the_dependencies);
     };
-    return ObjectFactory;
+    return DIFactory;
 }());
-exports.ObjectFactory = ObjectFactory;
+exports.DIFactory = DIFactory;

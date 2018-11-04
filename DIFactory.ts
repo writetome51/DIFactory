@@ -3,15 +3,15 @@ import { IDependencyRegistration } from './IDependencyRegistration';
 
 
 /*****
- ObjectFactory simplifies the instantiating of a class that uses dependency injection:
+ DIFactory simplifies the instantiating of a class that uses dependency injection:
 
- let object = ObjectFactory.getInstance(
+ let object = DIFactory.getInstance(
      TheClass, [nonDependencyArg, nonDependencyArg2,...]
  );
 
- To accomplish this, TheClass must first be registered with ObjectFactory:
+ To accomplish this, TheClass must first be registered with DIFactory:
 
- ObjectFactory.register(
+ DIFactory.register(
      {class: TheClass, dependencies: [DependencyClass1, DependencyClass2,...] }
  );
 
@@ -19,7 +19,7 @@ import { IDependencyRegistration } from './IDependencyRegistration';
  *****/
 
 
-export class ObjectFactory {
+export class DIFactory {
 
 
 	static register(registration: IDependencyRegistration) {

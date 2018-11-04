@@ -1,6 +1,6 @@
 {
-  "name": "@writetome51/object-factory",
-  "version": "1.0.2",
+  "name": "@writetome51/di-factory",
+  "version": "1.0.0",
   "description": "A simple dependency-injection tool",
   "main": "",
   "scripts": {
@@ -8,7 +8,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/writetome51/ObjectFactory.git"
+    "url": "git+https://github.com/writetome51/DIFactory.git"
   },
   "keywords": [
     "dependency-injection",
@@ -19,9 +19,9 @@
   "author": "Steve Thompson",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/writetome51/ObjectFactory/issues"
+    "url": "https://github.com/writetome51/DIFactory/issues"
   },
-  "homepage": "https://github.com/writetome51/ObjectFactory#readme",
+  "homepage": "https://github.com/writetome51/DIFactory#readme",
   "dependencies": {
     "basic-data-handling": "latest"
   }
