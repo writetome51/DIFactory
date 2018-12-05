@@ -17,7 +17,7 @@ export class TheClass{
 
    ...code...
 
-} // Below the closing brace, register the class with DIFactory:
+} // Below the closing brace, TheClass is registered with DIFactory:
 
  DIFactory.register(
      {

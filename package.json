@@ -1,7 +1,7 @@
 {
   "name": "@writetome51/di-factory",
-  "version": "1.0.0",
-  "description": "A simple dependency-injection tool",
+  "version": "1.0.1",
+  "description": "A tool for instantiating classes that require dependency injection",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
@@ -27,6 +27,6 @@
     "typescript": "^3.0.1"
   },
   "dependencies": {
-    "basic-data-handling": "latest"
+    "basic-data-handling": "~1.0.13"
   }
 }

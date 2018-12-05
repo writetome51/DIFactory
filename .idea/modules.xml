@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/DIFactory.iml" filepath="$PROJECT_DIR$/.idea/DIFactory.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/di-factory.iml" filepath="$PROJECT_DIR$/.idea/di-factory.iml" />
     </modules>
   </component>
 </project>
