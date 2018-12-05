@@ -1,7 +1,7 @@
 {
   "name": "@writetome51/di-factory",
   "version": "1.0.1",
-  "description": "A tool for instantiating classes that require dependency injection",
+  "description": "A TypeScript/JavaScript tool for instantiating classes that require dependency injection",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
