@@ -6,7 +6,7 @@ import { IDependencyRegistration } from './IDependencyRegistration';
  DIFactory simplifies the instantiating of a class that uses dependency injection:
 
  let object = DIFactory.getInstance(
- TheClass, [nonDependencyArg, nonDependencyArg2,...]
+        TheClass, [nonDependencyArg, nonDependencyArg2,...]
  );
 
  To accomplish this, TheClass must first be registered with DIFactory:
@@ -32,7 +32,10 @@ export class DIFactory {
 	}
 
 
-	static getInstance(TheClass: Object, constructor_arguments_that_come_after_the_dependencies = []) {
+	static getInstance(
+		TheClass: Object, 
+		constructor_arguments_that_come_after_the_dependencies = []
+	) {
 		let factory = _dInjector.getFactory(TheClass);
 		return factory(...constructor_arguments_that_come_after_the_dependencies);
 	}
