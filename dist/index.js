@@ -5,7 +5,7 @@ var DependencyInjector_1 = require("./privy/DependencyInjector");
  DIFactory simplifies the instantiating of a class that uses dependency injection:
 
  let object = DIFactory.getInstance(
-        TheClass, [nonDependencyArg, nonDependencyArg2,...]
+ TheClass, [nonDependencyArg, nonDependencyArg2,...]
  );
 
  To accomplish this, TheClass must first be registered with DIFactory:
@@ -25,7 +25,8 @@ var DIFactory = /** @class */ (function () {
     DIFactory.registerMultiple = function (registrations) {
         DependencyInjector_1._dInjector.registerMultiple(registrations);
     };
-    DIFactory.getInstance = function (TheClass, constructor_arguments_that_come_after_the_dependencies) {
+    DIFactory.getInstance = function (TheClass, // class or constructor function
+    constructor_arguments_that_come_after_the_dependencies) {
         if (constructor_arguments_that_come_after_the_dependencies === void 0) { constructor_arguments_that_come_after_the_dependencies = []; }
         var factory = DependencyInjector_1._dInjector.getFactory(TheClass);
         return factory.apply(void 0, constructor_arguments_that_come_after_the_dependencies);

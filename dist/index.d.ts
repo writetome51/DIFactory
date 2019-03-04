@@ -21,5 +21,8 @@ export declare class DIFactory {
 	static registerMultiple(registrations: IDependencyRegistration[]): void;
 
 
-	static getInstance(TheClass: Object, constructor_arguments_that_come_after_the_dependencies?: any[]): any;
+	static getInstance(
+		TheClass: Function,
+		constructor_arguments_that_come_after_the_dependencies?: any[]
+	): Object;
 }

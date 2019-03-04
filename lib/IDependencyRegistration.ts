@@ -1,7 +1,7 @@
 export interface IStoredDependencyRegistration {
-	dependencies: Object[]  // array of classes
+	dependencies: Function[]  // array of classes or constructor functions.
 }
 
 export interface IDependencyRegistration extends IStoredDependencyRegistration{
-	class: Object
+	class: Function  // class or constructor function.
 }

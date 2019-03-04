@@ -1,9 +1,11 @@
 # DIFactory
 
-DIFactory makes it easy to instantiate a class whose constructor uses dependency injection.
+DIFactory makes it easy to instantiate a class whose constructor uses  
+dependency injection.
 
-To make DIFactory handle dependency-injection for a class, first you need to register that   
-class with DIFactory.  In this example, a class is registered right below its own definition:
+To make DIFactory handle dependency-injection for a class, first you  
+need to register that class with DIFactory.  In this example, a class  
+is registered right below its own definition:
 ```
 export class ExampleClass{
 
@@ -27,20 +29,21 @@ export class ExampleClass{
      {
         class: ExampleClass,
 
-        // Make sure the dependencies are listed in same order as they are in the constructor
-        // parameters above:
+        // Make sure the dependencies are listed in same order as they are 
+        // in the constructor parameters above:
         dependencies: [BlueCar, GreenCar, RedCar]
      }
  );
  ```
-
- Now that it's registered, you can get an instance of ExampleClass:
+ And that's it.  Now that it's registered, you can get an instance of  
+ ExampleClass:
 ```
 // for the name and age arguments in the constructor, we're passing 'Steve' and 30:
 let instance = DIFactory.getInstance(ExampleClass, ['Steve', 30]);
  ```
- In the statement above, the array argument is there to hold any additional arguments that get passed
- to ExampleClass' constructor after the injected dependencies.   
+ In the statement above, the array argument is there to hold any additional  
+ arguments that get passed to ExampleClass' constructor after the injected  
+ dependencies.   
  (If there are no arguments after the dependencies, it's unnecessary to pass the array.)
 
 Note:  If a class doesn't have any injected dependencies, it's unnecessary to register it.
