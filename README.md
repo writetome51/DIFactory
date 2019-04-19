@@ -46,8 +46,6 @@ let instance = DIFactory.getInstance(ExampleClass, ['Steve', 30]);
  dependencies.   
  (If there are no arguments after the dependencies, it's unnecessary to pass the array.)
 
-Note:  If a class doesn't have any injected dependencies, it's unnecessary to register it.
-
 
 ## Installation
 
